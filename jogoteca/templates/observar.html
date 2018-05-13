@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<figure class="thumb col-md-4">
+    <img class="img-responsive" src="{{ url_for('imagem',nome_arquivo=capa_jogo) }}">
+</figure>
+
+<input type="hidden" name="id" value="{{ jogo.id }}">
+
+<h3>Nome</h3>
+<h5 id="nome" class="" name="nome">{{ jogo.nome }}</h5>
+
+<h2>Categoria</h2>
+<h5 id="categoria" class="" name="categoria">{{ jogo.categoria }}</h5>
+
+
+<h2>Console</h2>
+<h5 id="console" class="" name="console">{{ jogo.console }}</h5>
+
+
+<br>
+<br>
+<a class="btn btn-danger" href="{{url_for('index')}}">Voltar</a>
+
+{% endblock %}
